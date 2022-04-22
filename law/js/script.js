@@ -331,9 +331,9 @@ function initTabsToAccordion() {
         slidesToScroll: 1,
         cssEase: 'linear',
         autoplay: true,
-        arrows:false,
+        arrows:true,
         centerMode: true,
-        draggable: false,
+        draggable: true,
         focusOnSelect: true,
         asNavFor: ".feedback-slides .client-feedback>div",
     });

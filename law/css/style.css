@@ -1708,6 +1708,10 @@ Feedback Area CSS
     line-height: 1.3;
 }
 
+.blog-text p {
+    margin-bottom: 10px;
+}
+
 .blog-image,
 .blog-image2 {
     max-width: 500px;
@@ -3089,4 +3093,23 @@ form.findus textarea {
     .price-item {
         margin: 40px 0 0 0;
     }
+}
+
+.pdf__download {}
+
+.case__pdf {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    color: #282828;
+}
+
+.case__pdf:hover {
+    cursor: pointer;
+}
+
+.case__pdf img {
+    margin-right: 5px;
 }
