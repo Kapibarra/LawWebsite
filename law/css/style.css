@@ -35,6 +35,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700');
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -866,13 +870,15 @@ h6 {
 .header-appear .navbar .logo-default,
 .navbar .logo-scrolled {
     display: none;
-    max-width: 80px;
+    max-width: 70px;
     max-height: 80px;
 }
 
 .header-appear .navbar .logo-scrolled,
 .navbar .logo-default {
     display: inline-block;
+    max-width: 70px;
+    max-height: 80px;
 }
 
 .logo-scrolled {
