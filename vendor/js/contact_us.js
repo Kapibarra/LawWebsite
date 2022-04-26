@@ -82,7 +82,7 @@ $(".contact_btn").on('click', function () {
     {
         if ($("#result").length) {
             // alert("yes");
-            output = '<div class="alert-danger" style="padding:10px 15px; margin-bottom:30px;">Please provide the missing fields.</div>';
+            output = '<div class="alert-danger" style="padding:10px 15px; margin-bottom:30px;">Заполните недостающие поля.</div>';
             $("#result").hide().html(output).slideDown();
             $(".contact_btn i").addClass('d-none');
         }else{
@@ -90,7 +90,7 @@ $(".contact_btn").on('click', function () {
                 icon: 'error',
                 type: 'error',
                 title: 'Oops...',
-                html: '<div class="text-danger">Please provide the missing fields.</div>'
+                html: '<div class="text-danger">Заполните недостающие поля.</div>'
             })
             $(".contact_btn i").addClass('d-none');
         }
@@ -196,7 +196,7 @@ $(".modal_contact_btn").on('click', function () {
                 icon: 'error',
                 type: 'error',
                 title: 'Oops...',
-                html: '<div class="text-danger">Please provide the missing fields.</div>'
+                html: '<div class="text-danger">Заполните недостающие поля.</div>'
             })
             $(".modal_contact_btn i").addClass('d-none');
         }
