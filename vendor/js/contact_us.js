@@ -45,7 +45,6 @@ $(".contact_btn").on('click', function () {
                     output = '<div class="alert-success" style="padding:10px 15px; margin-bottom:30px;">' + response.text + '</div>';
                     //reset values in all input fields
                     $('.contact-form input').val('');
-                    $('.contact-form textarea').val('');
                 }
 
                 if ($("#result").length) {
@@ -73,7 +72,7 @@ $(".contact_btn").on('click', function () {
                 }
             },
             error: function () {
-                alert("Failer");
+                alert("Failer TEST");
             }
         });
 

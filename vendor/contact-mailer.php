@@ -11,7 +11,7 @@ if($_POST)
 
     $mail = new PHPMailer();
 
-    $your_email = "o-pal@ya.ru";
+    $your_email = "ga1ned12@yandex.ru";
 
 
     //check if its an ajax request, exit if not
@@ -266,18 +266,18 @@ if($_POST)
 
 
 
-    //Server settings
-//    $mail->isSMTP();                                            // Send using SMTP
-//    $mail->Host       = 'smtp.googlemail.com';                    // Set the SMTP server to send through
-//    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-//    $mail->Username   = 'website@gmail.com';                     // SMTP username
-//    $mail->Password   = 'your password';                         // SMTP password
-//    $mail->SMTPSecure = 'TLS';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
-//    $mail->Port       = 587;                                    // TCP port to connect to
+	// Server settings
+	$mail->isSMTP(); // Send using SMTP
+	$mail->Host = 'smtp.yandex.com'; // Set the SMTP server to send through
+	$mail->SMTPAuth = true; // Enable SMTP authentication
+	$mail->Username = 'noviweb@yandex.ru'; // SMTP username
+	$mail->Password = 'cf911313'; // SMTP password
+	$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+	$mail->Port = 465; // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
-    //Recipients
-    $mail->setFrom($user_Email,$user_Name);
-    $mail->addAddress($your_email, 'Theme Industry');     // Add a recipient
+	$mail->setFrom($mail->Username, 'Electro-hand.ru'); // Your email
+	$mail->addAddress('mail_to_email', 'mail_to_name'); // Add a recipient на какой емейл отправить!! проверить!!!!                               // TCP port to connect to
+
     $mail->addReplyTo($your_email, 'Information');
 
 
