@@ -73,7 +73,7 @@
         font-family: "Open Sans", sans-serif;
         font-size: 14px;
         font-weight: 400;
-        color: #9da0b2;
+        color: #2f3136;
         line-height: 1.3rem;
     }
     
@@ -489,7 +489,7 @@
         font-family: 'Raleway', sans-serif;
         font-size: 20px;
         font-weight: 400;
-        color: #9da0b2;
+        color: #2d2e33;
     }
     
     h5 {
@@ -1312,11 +1312,11 @@ Carousel
     
     .team-box {
         background: #161922;
-        padding: 65px 9px;
+        padding: 32px 9px;
     }
     
     .team-box h6 {
-        padding-bottom: 20px;
+        padding-bottom: 50px;
     }
     
     .social_icons li {
@@ -1325,14 +1325,14 @@ Carousel
     }
     
     .social_icons li a {
-        height: 30px;
-        width: 30px;
+        height: 45px;
+        width: 45px;
         border-radius: 30px;
         color: #fff;
         background: transparent;
         display: block;
-        line-height: 32px;
-        font-size: 14px;
+        line-height: 48px;
+        font-size: 21px;
     }
     
     .carousel-date {
@@ -1656,7 +1656,7 @@ Feedback Area CSS
     }
     
     .blog-right {
-        text-align: right;
+        text-align: left;
     }
     
     .blog-text h2 {
@@ -2686,6 +2686,7 @@ Go Top CSS
     
     .swiper-slide {
         text-align: center;
+        height: 325px !important;
     }
     
     .swiper-container-vertical>.swiper-pagination-bullets {
@@ -2707,9 +2708,9 @@ Go Top CSS
     }
     
     .swiper-slide p {
-        max-width: 292px;
+        max-width: 340px;
         margin: 0 auto;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
     /* ===================================
     Media Queries
@@ -3132,7 +3133,7 @@ Go Top CSS
     .accordion li i {
         position: absolute;
         transform: translate(-6px, 0);
-        margin-top: 16px;
+        margin-top: 5px;
         right: 0;
     }
     
