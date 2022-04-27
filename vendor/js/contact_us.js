@@ -72,7 +72,7 @@ $(".contact_btn").on('click', function () {
                 }
             },
             error: function () {
-                alert("Failer TEST");
+                alert("Failer");
             }
         });
 

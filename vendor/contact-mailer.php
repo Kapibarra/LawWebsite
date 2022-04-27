@@ -271,20 +271,19 @@ if($_POST)
 	$mail->Host = 'smtp.yandex.com'; // Set the SMTP server to send through
 	$mail->SMTPAuth = true; // Enable SMTP authentication
 	$mail->Username = 'noviweb@yandex.ru'; // SMTP username
-	$mail->Password = 'cf911313'; // SMTP password
+	$mail->Password = 'Cf911313'; // SMTP password
 	$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 	$mail->Port = 465; // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
-	$mail->setFrom($mail->Username, 'Electro-hand.ru'); // Your email
-	$mail->addAddress('mail_to_email', 'mail_to_name'); // Add a recipient на какой емейл отправить!! проверить!!!!                               // TCP port to connect to
-
+	$mail->setFrom($mail->Username, 'SMTPstroyadvice'); // Your email
+	$mail->addAddress($your_email, $your_email); // Add a recipient на какой емейл отправить!! проверить!!!!                               // TCP port to connect to
     $mail->addReplyTo($your_email, 'Information');
 
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'New Contact Inquiry from your Website';
-    $mail->Body  = "<h4 style='text-align: center;padding: 25px 15px;background-color: #0c6c9e;color: #FFFFFF;font-size:16px;width:90%;border-radius: 10px;'>Hi There! You have a new inquiry from your website.</h4><br><br>";
+    $mail->Subject = 'Новая заявка с сайта.';
+    $mail->Body  = "<h4 style='text-align: center;padding: 25px 15px;background-color: #0c6c9e;color: #FFFFFF;font-size:16px;width:90%;border-radius: 10px;'>Привет! У вас новая заявка с сайта stroyadvice.ru.</h4><br><br>";
 
     if(isset($_POST["userEmail"])) {
         $mail->Body .= "<strong>Email: </strong>" . $user_Email . "<br>";
@@ -345,7 +344,7 @@ if($_POST)
     if(isset($_POST["userMessage"])) {
         $mail->Body .= "<strong>Message: </strong><br><br><div style='background-color: #EDEFF2;padding:30px 15px;border-radius:10px;min-height:50px;width:90%;'>" . $user_Message . "</div><br>";
     }
-    $mail->Body .= '<strong>Best Regards,</strong><br>';
+    $mail->Body .= '<strong>Stroyadvice.ru</strong><br>';
 
     if(isset($user_Name)) {
         $mail->Body .= $user_Name . "<br>";
@@ -358,10 +357,10 @@ if($_POST)
 
     if(!$mail->send())
     {
-        $output = json_encode(array('type'=>'error', 'text' => 'Could not send mail! Please check your PHP mail configuration.'));
+        $output = json_encode(array('type'=>'error', 'text' => 'Упс...Что то пошло не так...Позвоните нам!'));
         die($output);
     }else{
-        $output = json_encode(array('type'=>'message', 'text' => 'Hi '.$user_Name .' Thank you for contacting us.'));
+        $output = json_encode(array('type'=>'message', 'text' => 'Ваше сообщение успешно отправлено'));
         die($output);
     }
 }
